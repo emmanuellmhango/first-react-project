@@ -34,14 +34,14 @@ body {
 
 .zero {
   grid-column-start: 1;
-  grid-column-end: 3;  
+  grid-column-end: 3;
 }
 
 .calculator-div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px;
+  gap: 0;
   height: 100%;
 }
 
