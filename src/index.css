@@ -1,10 +1,71 @@
 body {
+  background-color: rgba(86, 131, 154, 0.8);
+  font-weight: 600;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  color: rgb(48, 50, 50);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+.calculator-container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background-color: rgb(93, 94, 95);
+  border-radius: 4px;
+}
+
+.display-screen {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 2px;
+  border: 2px solid rgb(87, 85, 85, 0.7);
+  background-color: rgb(93, 94, 95);
+  color: #fff;
+  font-weight: 700;
+}
+
+.zero {
+  grid-column-start: 1;
+  grid-column-end: 3;  
+}
+
+.calculator-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px;
+  height: 100%;
+}
+
+.item-items {
+  background-color: rgb(238, 246, 253);
+  border: 1px solid rgb(87, 85, 85, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.item-controls {
+  background-color: rgb(253, 164, 12);
+  border: 1px solid rgb(87, 85, 85, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.item-items:hover,
+.item-controls:hover {
+  background-color: rgb(4, 131, 131);
+  color: #fff;
+  font-size: 22px;
 }
