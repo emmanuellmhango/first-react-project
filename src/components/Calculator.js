@@ -5,125 +5,27 @@ class MyCalculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      total: null,
+      total: 0,
       next: null,
       operation: null,
     };
     this.PutNumber = this.PutNumber.bind(this);
   }
 
-  PutNumber = (e) => {
-    const operations = ['+', '-', 'x', '%', '÷'];
-    const newVal = e.target.value;
-    const stateVal = this.state;
-    const betterVal = stateVal.next === null ? 0 : stateVal.next;
-    if (operations.includes(newVal)) {
-      const result = Calculate(stateVal, newVal);
-      if (result.total !== null && result.next === null) {
-        this.setState(
-          {
-            total: result.total,
-            next: null,
-            operation: newVal,
-          },
-        );
-      } else {
-        this.setState(
-          {
-            total: betterVal,
-            next: null,
-            operation: newVal,
-          },
-        );
-      }
-    } else if (newVal === '=') {
-      if (stateVal.next === null) {
-        if (stateVal.total !== null) {
-          this.setState(
-            {
-              total: stateVal.total,
-              next: null,
-              operation: null,
-            },
-          );
-        } else {
-          this.setState(
-            {
-              total: null,
-              next: null,
-              operation: null,
-            },
-          );
-        }
-      } else if (stateVal.total === null && stateVal.next !== null) {
-        this.setState(
-          {
-            total: null,
-            next: stateVal.next,
-            operation: null,
-          },
-        );
-      } else {
-        const result = Calculate(stateVal, newVal);
-        this.setState(
-          {
-            total: result.total,
-            next: null,
-            operation: null,
-          },
-        );
-      }
-    } else if (newVal === 'AC') {
-      this.setState(
-        {
-          total: null,
-          next: null,
-          operation: null,
-        },
-      );
-    } else if (newVal === '+/-') {
-      const result = Calculate(stateVal, newVal);
-      if (result.total !== null && result.total < 1) {
-        this.setState(
-          {
-            total: result.total,
-          },
-        );
-      }
-      if (result.next !== null && result.next < 1) {
-        this.setState(
-          {
-            next: result.next,
-          },
-        );
-      }
-    } else {
-      const newStateVal = parseInt(betterVal === 0 ? newVal : `${betterVal}${newVal}`, 10);
-      this.setState(
-        {
-          next: newStateVal,
-        },
-      );
-    }
+  PutNumber = (event) => {
+    this.setState((state) => Calculate(state, event.target.value));
   }
 
   render() {
     const { total, next, operation } = this.state;
-    let answer = null;
-    if (total === null && next !== null) {
-      answer = next;
-    } else if (total !== null && next === null) {
-      answer = total;
-    } else if (total !== null && next !== null) {
-      answer = next;
-    } else {
-      answer = 0;
-    }
-
     return (
       <div className="calculator-container">
-        <div className="calculator-div" id={operation}>
-          <div className="display-screen" id="display">{ answer }</div>
+        <div className="calculator-div">
+          <div className="display-screen" id="display">
+            {total}
+            {operation}
+            {next}
+          </div>
           <button type="button" className="item-ac item-items" value="AC" onClick={this.PutNumber}>AC</button>
           <button type="button" className="item-plus-minus item-items" value="+/-" onClick={this.PutNumber}>+/-</button>
           <button type="button" className="item-modulus item-items" value="%" onClick={this.PutNumber}>%</button>
