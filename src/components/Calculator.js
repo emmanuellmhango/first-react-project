@@ -55,6 +55,7 @@ class MyCalculator extends React.Component {
             },
           );
         }
+        // {}
       } else if (stateVal.total === null && stateVal.next !== null) {
         this.setState(
           {
