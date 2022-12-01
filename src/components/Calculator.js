@@ -13,7 +13,9 @@ class MyCalculator extends React.Component {
   }
 
   PutNumber = (event) => {
-    this.setState((state) => Calculate(state, event.target.value));
+    this.setState(
+      (state) => Calculate(state, event.target.value),
+    );
   }
 
   render() {
