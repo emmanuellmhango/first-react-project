@@ -63,9 +63,14 @@ body {
   font-size: 18px;
 }
 
-.item-items:hover,
-.item-controls:hover {
+.item-items:hover {
   background-color: rgb(4, 131, 131);
+  color: #fff;
+  font-size: 22px;
+}
+
+.item-controls:hover {
+  background-color: rgb(230, 20, 20);
   color: #fff;
   font-size: 22px;
 }
