@@ -1,5 +1,6 @@
 body {
-  background-color: rgba(86, 131, 154, 0.8);
+  background: rgb(58, 103, 180);
+  background: linear-gradient(90deg, rgba(58, 103, 180, 1) 0%, rgba(29, 253, 228, 1) 50%, rgba(252, 176, 69, 1) 100%);
   font-weight: 600;
   margin: 0;
   padding: 0;
