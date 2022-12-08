@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot testing Testing Home component 1`] = `
+<div
+  className="header-links"
+>
+  <div
+    className="header-title"
+  >
+    <span>
+      Math Magician
+    </span>
+  </div>
+  <div
+    className="links"
+  >
+    <a
+      aria-current="page"
+      className="spacing link active"
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+     | 
+    <a
+      className="spacing link"
+      href="/calculator"
+      onClick={[Function]}
+    >
+      Calculator
+    </a>
+     | 
+    <a
+      className="spacing link"
+      href="/quote"
+      onClick={[Function]}
+    >
+      Quote
+    </a>
+  </div>
+</div>
+`;
