@@ -44,6 +44,6 @@ const MyCalculator = () => {
       </div>
     </div>
   );
-}
+};
 
 export default MyCalculator;
