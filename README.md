@@ -90,7 +90,7 @@ After you're finished please remove all the comments and instructions!
 
 > Please click the link below to check the **demo**
 
-- [Live Demo Link](https://github.)
+- [Live Demo Link](https://react-calculator-w6xh.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
